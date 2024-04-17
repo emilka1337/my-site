@@ -311,25 +311,37 @@ header .header-container .navbar-toggler {
 }
 @media screen and (max-width: 992px) {
   .about .about-container {
-    width: 90%;
+    width: 100%;
     flex-direction: column;
+    align-items: center;
   }
   .about .about-container .left {
     width: 100%;
   }
+  .about .about-container .left ul {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
   .about .about-container .left li {
     border-left: 0 !important;
-    border-bottom: 3px solid #FF715B;
+    padding: 20px 0px !important;
+    padding-left: 0 !important;
+    margin-bottom: 0 !important;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0 !important;
   }
   .about .about-container .left li::after {
-    left: 50% !important;
-    bottom: -5px !important;
+    display: none !important;
   }
   .about .about-container .right {
-    width: 100%;
+    width: 90%;
   }
   .about .about-container .right h2 {
     text-align: center;
+    margin-bottom: 0;
   }
   .about .about-container .right ul {
     justify-content: center;
