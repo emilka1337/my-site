@@ -1,0 +1,38 @@
+.skills {
+    background: #16232c;
+
+    .skills-container {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+
+        .skills-divider {
+            width: 50%;
+            display: flex;
+            justify-content: space-around;
+
+            .skill {
+                font-size: 30px;
+                padding: 20px;
+                color: #444f58;
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .skills-container {
+            flex-direction: column;
+            width: 90%;
+
+            .skills-divider {
+                justify-content: space-between !important;
+                width: 100% !important;
+
+                .skill {
+                    font-size: initial !important;
+                }
+            }
+        }
+    }
+}

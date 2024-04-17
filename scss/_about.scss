@@ -1,0 +1,128 @@
+.about {
+    .about-container {
+        width: 80%;
+        margin: auto;
+        padding: 50px 0px;
+        display: flex;
+
+        .left {
+            width: 50%;
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                // justify-content: space-between;
+
+                li {
+                    display: flex;
+                    gap: 20px;
+                    border-left: 3px solid $accentColor;
+                    padding: 20px 40px;
+                    padding-right: 0;
+                    position: relative;
+                    margin-bottom: 40px;
+
+                    &::after {
+                        content: "";
+                        display: inline-block;
+                        width: 8px;
+                        height: 8px;
+                        background: $accentColor;
+                        border-radius: 50%;
+                        position: absolute;
+                        bottom: -24px;
+                        left: -5px;
+                    }
+
+                    &:last-child::after {
+                        display: none;
+                    }
+
+                    svg {
+                        width: 50px;
+                        fill: $accentColor;
+                    }
+                }
+            }
+        }
+
+        .right {
+            width: 50%;
+
+            h2 {
+                margin-top: 0;
+                font-size: 40px;
+            }
+
+            p {
+                font-weight: 100;
+                line-height: 30px;
+                margin-bottom: 40px;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: flex;
+                gap: 40px;
+
+                li {
+                    a {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        text-decoration: none;
+                        transition: 300ms;
+                        font-weight: 300;
+                        font-size: 14px;
+
+                        &:hover {
+                            color: $accentColor;
+                        }
+
+                        svg {
+                            width: 40px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            width: 90%;
+            flex-direction: column;
+
+            .left {
+                width: 100%;
+
+                li {
+                    border-left: 0 !important;
+                    border-bottom: 3px solid $accentColor;
+
+                    &::after {
+                        left: 50% !important;
+                        bottom: -5px !important;
+                    }
+                }
+            }
+
+            .right {
+                width: 100%;
+                
+                h2 {
+                    text-align: center;
+                }
+
+                ul {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
