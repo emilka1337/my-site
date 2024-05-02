@@ -471,14 +471,28 @@ header .header-container .navbar-toggler {
   width: 50%;
   padding-left: 50px;
 }
-.projects .projects-container .project .photos .main-carousel .flickity-button {
+.projects .projects-container .project .photos .project-carousel {
+  /* position dots up a bit */
+  /* dots are lines */
+}
+.projects .projects-container .project .photos .project-carousel .flickity-button {
   background: transparent;
   border-radius: 0;
   height: 100%;
   color: #fff;
-  mix-blend-mode: difference;
+  mix-blend-mode: exclusion;
   opacity: 0.5;
   text-shadow: 0px 0px 20px #343434;
+}
+.projects .projects-container .project .photos .project-carousel .flickity-page-dots {
+  bottom: -22px;
+}
+.projects .projects-container .project .photos .project-carousel .flickity-page-dots .dot {
+  height: 4px;
+  width: 40px;
+  margin: 0;
+  border-radius: 0;
+  background: #FF715B;
 }
 .projects .projects-container .project .photos img {
   max-width: 100%;
