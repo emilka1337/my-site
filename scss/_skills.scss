@@ -19,10 +19,12 @@
                 font-weight: 400;
             }
         }
-    }
 
-    @media screen and (max-width: 992px) {
-        .skills-container {
+        @media screen and (max-width: 1024px) {
+            width: 90%;
+        }
+
+        @media screen and (max-width: 992px) {
             flex-direction: column;
             width: 90%;
 

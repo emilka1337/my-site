@@ -176,6 +176,11 @@ header .header-container .navbar-toggler {
 .hero .photo img {
   max-width: 100%;
 }
+@media screen and (max-width: 1024px) {
+  .hero {
+    width: 90%;
+  }
+}
 @media screen and (max-width: 992px) {
   .hero {
     flex-direction: column;
@@ -223,6 +228,11 @@ header .header-container .navbar-toggler {
   padding: 20px;
   color: #444f58;
   font-weight: 400;
+}
+@media screen and (max-width: 1024px) {
+  .skills .skills-container {
+    width: 90%;
+  }
 }
 @media screen and (max-width: 992px) {
   .skills .skills-container {
@@ -317,6 +327,11 @@ header .header-container .navbar-toggler {
 .about .about-container .right ul li a svg {
   width: 40px;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 1024px) {
+  .about .about-container {
+    width: 90%;
+  }
 }
 @media screen and (max-width: 992px) {
   .about .about-container {
@@ -467,6 +482,11 @@ header .header-container .navbar-toggler {
 }
 .projects .projects-container .project .photos img {
   max-width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .projects .projects-container {
+    width: 90%;
+  }
 }
 @media screen and (max-width: 992px) {
   .projects .projects-container {
