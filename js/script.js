@@ -9,3 +9,14 @@ document.querySelectorAll('.nav-link').forEach(link => {
         document.querySelector('.navbar>ul').classList.remove("show");
     });
 });
+
+document.querySelectorAll('.project-carousel').forEach(elem => {
+    new Flickity(elem, {
+        "cellAlign": "left",
+        "contain": "true",
+        "wrapAround": "true",
+        "autoPlay": "1500",
+        "selectedAttraction": "0.005",
+        "friction": "0.15"
+    })
+});
