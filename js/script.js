@@ -3,3 +3,9 @@ document.querySelector('.navbar-toggler').addEventListener("click", () => {
 });
 
 document.querySelector('#scrollToTop').addEventListener("click", () => window.scroll({ top: 0, behavior: "smooth" }));
+
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener("click", () => {
+        document.querySelector('.navbar>ul').classList.remove("show");
+    });
+});

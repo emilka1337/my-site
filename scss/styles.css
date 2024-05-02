@@ -475,6 +475,7 @@ header .header-container .navbar-toggler {
   .projects .projects-container .project {
     flex-direction: column !important;
     text-align: center;
+    margin-bottom: 70px;
   }
   .projects .projects-container .project .description {
     width: 100%;
