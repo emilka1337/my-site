@@ -488,4 +488,37 @@ header .header-container .navbar-toggler {
     width: 100%;
     padding: 0 !important;
   }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #0d161d;
+  padding: 20px 0px;
+  font-size: 14px;
+  font-weight: 100;
+}
+footer p span {
+  color: #FF715B;
+}
+footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+footer ul a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: 300ms;
+}
+footer ul a:hover {
+  color: #FF715B;
+}
+footer ul a svg {
+  height: 32px;
 }/*# sourceMappingURL=styles.css.map */
