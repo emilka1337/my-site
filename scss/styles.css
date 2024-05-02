@@ -400,6 +400,7 @@ header .header-container .navbar-toggler {
 .projects .projects-container .project .description h3 {
   font-size: 26px;
   font-weight: 600;
+  margin-top: 0;
 }
 .projects .projects-container .project .description .technologies {
   margin: 0;
@@ -521,4 +522,5 @@ footer ul a:hover {
 }
 footer ul a svg {
   height: 32px;
+  margin-bottom: 10px;
 }/*# sourceMappingURL=styles.css.map */
