@@ -17,7 +17,9 @@ document.querySelector('.show-languages-button').addEventListener("focus", () =>
 });
 
 document.querySelector('.show-languages-button').addEventListener("blur", () => {
-    document.querySelector('.languages-list').classList.remove("show");
+    setTimeout(function() {
+        document.querySelector('.languages-list').classList.remove("show");
+    }, 200);
 });
 
 window.addEventListener("scroll", () => {
