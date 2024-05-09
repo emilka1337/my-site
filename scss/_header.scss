@@ -14,7 +14,7 @@ header {
     &.non-transparent {
         background: $siteBgColor;
     }
-    
+
     .header-container {
         width: 80%;
         margin: auto;
@@ -34,7 +34,8 @@ header {
             list-style: none;
             display: flex;
 
-            a, button {
+            a,
+            button {
                 display: inline-block;
                 padding: 30px 15px;
                 text-decoration: none;
@@ -56,7 +57,6 @@ header {
         }
 
         .languages-list {
-            // display: none;
             flex-direction: column;
             background: $secondaryBgColor;
             box-shadow: 0px 0px 20px $secondaryBgColor;
@@ -67,8 +67,6 @@ header {
             transition: 300ms;
 
             &.show {
-                // display: flex;
-                // height: auto;
                 height: 108px;
             }
 
@@ -117,6 +115,38 @@ header {
                     padding: 15px;
                     font-size: 20px;
                     color: $fontColor;
+                }
+            }
+
+            li:last-child {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                .show-languages-button {
+                    padding: 15px;
+                }
+            }
+
+            .languages-list {
+                position: relative;
+                top: 0;
+                left: 0;
+                padding: 0;
+                // height: 0px !important;
+                flex-direction: row;
+                gap: 15px;
+                background: transparent;
+                box-shadow: none;
+
+                button {
+                    // background: $secondaryBgColor;
+                    border: 1px solid $fontColor;
+                    padding: 10px;
+                }
+
+                &.show {
+                    height: 60px;
                 }
             }
 
