@@ -1,5 +1,6 @@
 .hero {
     margin-top: 81.6px;
+    padding-top: 50px;
     display: flex;
     width: 80%;
     margin-left: auto;
@@ -69,6 +70,8 @@
 
         img {
             max-width: 100%;
+            z-index: -100;
+            filter: brightness(90%) drop-shadow(0px 0px 100px #ff715bb3);
         }
     }
 

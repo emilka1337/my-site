@@ -21,6 +21,14 @@ h1, h2, h3, h4, h5, h6, p, label, a {
     color: $fontColor;
 }
 
+::-webkit-scrollbar {
+    background: $secondaryBgColor;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $accentColor;
+}
+
 ::selection {
     color: #fff;
     background: $accentColor

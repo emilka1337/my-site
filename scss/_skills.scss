@@ -1,5 +1,6 @@
 .skills {
     background: #16232c;
+    z-index: 100;
 
     .skills-container {
         width: 80%;
@@ -17,6 +18,7 @@
                 padding: 20px;
                 color: #444f58;
                 font-weight: 400;
+                user-select: none;
             }
         }
 

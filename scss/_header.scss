@@ -3,8 +3,17 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    background: $siteBgColor;
+    background: transparent;
     z-index: 100;
+    transition: 200ms;
+
+    &.hidden {
+        top: -81.6px !important;
+    }
+
+    &.non-transparent {
+        background: $siteBgColor;
+    }
     
     .header-container {
         width: 80%;
@@ -25,15 +34,47 @@ header {
             list-style: none;
             display: flex;
 
-            a {
+            a, button {
                 display: inline-block;
                 padding: 30px 15px;
                 text-decoration: none;
                 transition: 300ms;
+                background: transparent;
+                border: none;
+                color: $fontColor;
+                cursor: pointer;
 
                 &:hover {
                     color: $accentColor;
                 }
+            }
+
+            button svg {
+                position: relative;
+                top: 2px;
+            }
+        }
+
+        .languages-list {
+            // display: none;
+            flex-direction: column;
+            background: $secondaryBgColor;
+            box-shadow: 0px 0px 20px $secondaryBgColor;
+            position: absolute;
+            top: 60px;
+            height: 0;
+            overflow: hidden;
+            transition: 300ms;
+
+            &.show {
+                // display: flex;
+                // height: auto;
+                height: 108px;
+            }
+
+            button {
+                display: block;
+                padding: 10px 25px;
             }
         }
 
