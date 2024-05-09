@@ -1,17 +1,20 @@
-let currentScroll = 0;
+const STATES = {        // This object contains states from the whole site
+    currentScroll: 0
+}
 
+//#region Navbar toggling on mobile
 document.querySelector('.navbar-toggler').addEventListener("click", () => {
     document.querySelector('.navbar>ul').classList.toggle("show");
 });
-
-document.querySelector('#scrollToTop').addEventListener("click", () => window.scroll({ top: 0, behavior: "smooth" }));
 
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener("click", () => {
         document.querySelector('.navbar>ul').classList.remove("show");
     });
 });
+//#endregion
 
+//#region shows/hides languages on focus/blur button
 document.querySelector('.show-languages-button').addEventListener("focus", () => {
     document.querySelector('.languages-list').classList.add("show");
 });
@@ -21,10 +24,12 @@ document.querySelector('.show-languages-button').addEventListener("blur", () => 
         document.querySelector('.languages-list').classList.remove("show");
     }, 200);
 });
+//#endregion
 
+//#region  Events that happens on page scroll
 window.addEventListener("scroll", () => {
     // Shows/hides header when scrolled up/down
-    if (window.scrollY > currentScroll) {
+    if (window.scrollY > STATES.currentScroll) {
         document.querySelector('header').classList.add("hidden");
     } else {
         document.querySelector('header').classList.remove("hidden");    
@@ -35,10 +40,17 @@ window.addEventListener("scroll", () => {
     } else {
         document.querySelector('header').classList.remove("non-transparent");
     }
-
-    currentScroll = window.scrollY;
+    // Hides language panel on scroll
+    if (document.querySelector('.languages-list').classList.contains("show")) {
+        document.querySelector('.show-languages-button').blur();
+        document.querySelector('.languages-list').classList.remove("show");
+    }
+    
+    STATES.currentScroll = window.scrollY;
 });
+//#endregion
 
+//#region // Setting up the carousel
 document.querySelectorAll('.project-carousel').forEach(elem => {
     new Flickity(elem, {
         "cellAlign": "left",
@@ -56,3 +68,6 @@ document.querySelectorAll('.project-carousel').forEach(elem => {
         }
     })
 });
+//#endregion
+
+document.querySelector('#scrollToTop').addEventListener("click", () => window.scroll({ top: 0, behavior: "smooth" }));
