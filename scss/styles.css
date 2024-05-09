@@ -420,7 +420,7 @@ header .header-container .navbar-toggler {
     align-items: center;
   }
   .about .about-container .left {
-    width: 100%;
+    width: 90%;
   }
   .about .about-container .left ul {
     flex-direction: row;
