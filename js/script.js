@@ -20,7 +20,7 @@ document.querySelector('.show-languages-button').addEventListener("focus", () =>
 });
 
 document.querySelector('.show-languages-button').addEventListener("blur", () => {
-    setTimeout(function() {
+    setTimeout(function () {
         document.querySelector('.languages-list').classList.remove("show");
     }, 200);
 });
@@ -32,7 +32,7 @@ window.addEventListener("scroll", () => {
     if (window.scrollY > STATES.currentScroll) {
         document.querySelector('header').classList.add("hidden");
     } else {
-        document.querySelector('header').classList.remove("hidden");    
+        document.querySelector('header').classList.remove("hidden");
     }
     // Makes header transparent when scroll position is 0
     if (window.scrollY > 0) {
@@ -45,9 +45,9 @@ window.addEventListener("scroll", () => {
         document.querySelector('.show-languages-button').blur();
         document.querySelector('.languages-list').classList.remove("show");
     }
-    
+
     STATES.currentScroll = window.scrollY;
-});
+}, { passive: true });
 //#endregion
 
 //#region // Setting up the carousel
