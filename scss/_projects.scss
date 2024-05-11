@@ -103,6 +103,9 @@
                 padding-left: 50px;
 
                 .project-carousel {
+                    .flickity-slider, .carousel-cell {
+                        will-change: transform;
+                    }
                     .flickity-button {
                         background: transparent;
                         border-radius: 0;

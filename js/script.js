@@ -3,7 +3,8 @@ const STATES = {        // This object contains states from the whole site
 }
 
 //#region Navbar toggling on mobile
-document.querySelector('.navbar-toggler').addEventListener("click", () => {
+document.querySelector('.navbar-toggler').addEventListener("click", function() {
+    this.classList.toggle("open")
     document.querySelector('.navbar>ul').classList.toggle("show");
 });
 

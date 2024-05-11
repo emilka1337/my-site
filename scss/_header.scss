@@ -6,6 +6,7 @@ header {
     background: transparent;
     z-index: 100;
     transition: 200ms;
+    will-change: background, top;
 
     &.hidden {
         top: -81.6px !important;
@@ -77,11 +78,41 @@ header {
         }
 
         .navbar-toggler {
-            display: none;
+            // display: none;
+            // padding: 0;
+            // border: 0;
+            // background: transparent;
+            // color: $fontColor;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             padding: 0;
             border: 0;
+            width: 25px;
+            height: 20px;
             background: transparent;
-            color: $fontColor;
+
+            .line {
+                width: 100%;
+                height: 2px;
+                background: $fontColor;
+                position: relative;
+                transition: 400ms;
+            }
+
+            &.open {
+                .line:nth-child(1) {
+                    transform: rotate(45deg);
+                    top: 9px;
+                }
+                .line:nth-child(2) {
+                    display: none;
+                }
+                .line:nth-child(3) {
+                    transform: rotate(-45deg);
+                    bottom: 9px;
+                }
+            }
         }
 
         @media screen and (max-width: 992px) {
@@ -106,6 +137,7 @@ header {
                 background: $siteBgColor;
                 height: 100vh;
                 padding-top: 40px;
+                will-change: left;
 
                 &.show {
                     left: 0 !important;
@@ -122,7 +154,7 @@ header {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                
+
                 .show-languages-button {
                     padding: 15px;
                 }

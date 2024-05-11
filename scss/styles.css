@@ -43,6 +43,7 @@ header {
   background: transparent;
   z-index: 100;
   transition: 200ms;
+  will-change: background, top;
 }
 header.hidden {
   top: -81.6px !important;
@@ -105,11 +106,32 @@ header .header-container .languages-list button {
   padding: 10px 25px;
 }
 header .header-container .navbar-toggler {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 0;
   border: 0;
+  width: 25px;
+  height: 20px;
   background: transparent;
-  color: #fff;
+}
+header .header-container .navbar-toggler .line {
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  position: relative;
+  transition: 400ms;
+}
+header .header-container .navbar-toggler.open .line:nth-child(1) {
+  transform: rotate(45deg);
+  top: 9px;
+}
+header .header-container .navbar-toggler.open .line:nth-child(2) {
+  display: none;
+}
+header .header-container .navbar-toggler.open .line:nth-child(3) {
+  transform: rotate(-45deg);
+  bottom: 9px;
 }
 @media screen and (max-width: 992px) {
   header .header-container {
@@ -133,6 +155,7 @@ header .header-container .navbar-toggler {
     background: #121F28;
     height: 100vh;
     padding-top: 40px;
+    will-change: left;
   }
   header .header-container ul.show {
     left: 0 !important;
@@ -554,6 +577,9 @@ header .header-container .navbar-toggler {
 .projects .projects-container .project .photos .project-carousel {
   /* position dots up a bit */
   /* dots are lines */
+}
+.projects .projects-container .project .photos .project-carousel .flickity-slider, .projects .projects-container .project .photos .project-carousel .carousel-cell {
+  will-change: transform;
 }
 .projects .projects-container .project .photos .project-carousel .flickity-button {
   background: transparent;
