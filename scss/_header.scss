@@ -78,18 +78,13 @@ header {
         }
 
         .navbar-toggler {
-            // display: none;
-            // padding: 0;
-            // border: 0;
-            // background: transparent;
-            // color: $fontColor;
-            display: flex;
+            display: none;
             flex-direction: column;
             justify-content: space-between;
             padding: 0;
             border: 0;
             width: 25px;
-            height: 20px;
+            height: 21px;
             background: transparent;
 
             .line {
@@ -103,14 +98,14 @@ header {
             &.open {
                 .line:nth-child(1) {
                     transform: rotate(45deg);
-                    top: 9px;
+                    top: 9.5px;
                 }
                 .line:nth-child(2) {
                     display: none;
                 }
                 .line:nth-child(3) {
                     transform: rotate(-45deg);
-                    bottom: 9px;
+                    bottom: 9.5px;
                 }
             }
         }
@@ -173,6 +168,7 @@ header {
 
                 button {
                     // background: $secondaryBgColor;
+                    display: flex;
                     border: 1px solid $fontColor;
                     padding: 10px;
                 }

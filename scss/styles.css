@@ -106,13 +106,13 @@ header .header-container .languages-list button {
   padding: 10px 25px;
 }
 header .header-container .navbar-toggler {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   padding: 0;
   border: 0;
   width: 25px;
-  height: 20px;
+  height: 21px;
   background: transparent;
 }
 header .header-container .navbar-toggler .line {
@@ -124,14 +124,14 @@ header .header-container .navbar-toggler .line {
 }
 header .header-container .navbar-toggler.open .line:nth-child(1) {
   transform: rotate(45deg);
-  top: 9px;
+  top: 9.5px;
 }
 header .header-container .navbar-toggler.open .line:nth-child(2) {
   display: none;
 }
 header .header-container .navbar-toggler.open .line:nth-child(3) {
   transform: rotate(-45deg);
-  bottom: 9px;
+  bottom: 9.5px;
 }
 @media screen and (max-width: 992px) {
   header .header-container {
@@ -184,6 +184,7 @@ header .header-container .navbar-toggler.open .line:nth-child(3) {
     box-shadow: none;
   }
   header .header-container .languages-list button {
+    display: flex;
     border: 1px solid #fff;
     padding: 10px;
   }
